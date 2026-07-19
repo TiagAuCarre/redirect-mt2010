@@ -5,6 +5,6 @@
 const redirections = {
   instagram: "https://instagram.com/toncompte",
   youtube: "https://youtube.com/@toncompte",
-  site: "https://ton-site.com" ,
-  "lbc/all": "lbc/index.html"
+  site: "https://ton-site.com",
+  "lbc/all": "/lbc/"
 };
