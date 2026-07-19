@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirection…</title>
+  </head>
+  <body>
+    <p>Redirection en cours…</p>
+
+    <script src="/redirects.js"></script>
+    <script>
+      // Exemples : redirect.mondomaine.extension/instagram → Instagram
+      //           redirect.mondomaine.extension/youtube   → YouTube
+      const raccourci = window.location.pathname
+        .replace(/^\/+|\/+$/g, "")
+        .toLowerCase();
+
+      const destination = redirections[raccourci];
+
+      if (destination) {
+        window.location.replace(destination);
+      } else {
+        document.body.innerHTML = "<p>Lien introuvable.</p>";
+        document.title = "Lien introuvable";
+      }
+    </script>
+  </body>
+</html>
